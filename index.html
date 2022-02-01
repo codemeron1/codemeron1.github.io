@@ -1,9 +1,149 @@
+<!--
+    The homepage of codemeron
+    displays all the system that I'm developing.
+-->
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Ronnie N. Del Rosario</title>
-  </head>
-  <body>
-    <h1>PORTFOLIO</h1>
-  </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A collection different web applications.">
+	<meta name="keywords" content="codemeron, grade, portal, ronnie del rosario, meron">
+	<meta name="author" content="Ronnie N. Del Rosario">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODEMERON - Apps</title>
+    <link rel="stylesheet" href="h/css/bootstrap.min.css">
+    <link rel="stylesheet" href="h/css/meron.css">
+    <style>
+        *{
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        #menu{
+            flex: auto;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            height: 35px;
+            width: 100%;
+            background-color: #4D4D4D;
+            overflow: hidden;
+        }
+        #ron {
+            position: absolute;
+            height: 40%;
+            bottom: 10px;
+            z-index: 1;
+            cursor: pointer;
+        }
+        #main{
+            flex: auto;
+            background-color: bisque;
+            height: 100vh;
+        }
+        .card-title {
+            overflow: hidden;
+        }
+        .card-image{
+            height: 180px; 
+            width: 80%; 
+            display: inline-block; 
+            margin: auto;
+        }
+        .card-text{
+            font-size: 16px;
+        }
+        #container {
+            width: 100%;
+            z-index: 2;
+            position: fixed;
+            bottom: -5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .icon-menu img{
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body> 
+    <img src="h/images/ron.png" id="ron" alt="ron">
+    <div id="container">
+        <div class="icon-menu" id="icon-about">
+            <img src="h/images/ic_information.png" alt="About" title="About">
+        </div>
+        <div class="icon-menu" id="icon-apps">
+            <img src="h/images/ic_apps.png" alt="My apps" title="My Apps">
+        </div>
+        <div class="icon-menu" id="icon-apps">
+            <img src="h/images/ic_tutorials.png" alt="Tutorials" title="Tutorials">
+        </div>
+    </div>
+    <div id="menu">
+
+        <!--<a class="navbar-brand" style="color: #2D7763; font-weight: bold;" href="#">CODEMERON</a>-->
+    </div>
+    <div id="main">
+        <div class="row justify-content-center" style="margin-top: 20px; padding: 10px;" id="systems">
+            <div class="col-md-auto ">
+                <div class="card mt-3" style="height: 388px">
+                    <img class="card-img-top mt-1 card-image"
+                        src="h/images/dl.svg" data-holder-rendered="true">
+                    <div class="card-body">
+                        <h5 class="card-title">FILER</h5>
+                        <p class="card-text">
+                            Download your Certificate of Registration and Evaluation of Grades here.
+                        </p>
+                        <a href="fd/index.html" class="btn bg-violet btn-rounded bottom mb-3 card-btn-1"> Visit </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-auto">
+                <div class="card mt-3" style="height: 388px">
+                    <img class="card-img-top mt-1 card-image" 
+                        src="h/images/mbo.svg" data-holder-rendered="true">
+                    <div class="card-body">
+                        <h5 class="card-title">KonekTayo</h5>
+                        <p class="card-text">
+                            An information system intended for the Local Government Units.
+                        </p>
+                        <a href="mbo/" class="btn bg-teal btn-rounded bottom mb-3 card-btn-1"> Visit </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-auto">
+                <div class="card mt-3" style="height: 388px">
+                    <img class="card-img-top mt-1 card-image"
+                        src="h/images//emodule.svg" data-holder-rendered="true">
+                    <div class="card-body">
+                        <h5 class="card-title">eModule</h5>
+                        <p class="card-text">
+                            Do you want to have access on the submitted outputs of your students.
+                        </p>
+                        <a href="techno/" class="btn bg-pink btn-rounded bottom mb-3 card-btn-1"> Visit </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let me = document.getElementById("ron");
+        me.addEventListener("click", () => {
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            document.getElementById("main").style.backgroundColor = "#" + randomColor;
+        });
+    </script>
+</body>
+
 </html>
