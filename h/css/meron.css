@@ -1,0 +1,41 @@
+.bg-teal{
+    background-color: #00bfa6;
+    color: white;
+}
+.bg-pink{
+    background-color: #F50057;
+    color: white;
+}
+.bg-violet{
+    background-color: #AA28AA;
+    color: white;
+}
+
+.teal{
+    color: #00bfa6;
+}
+.btn-rounded{
+    border-radius: 35px;
+}
+.bottom{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+.card-btn-1{
+    width: 190px;
+    margin: auto;
+}
+@media only screen and (max-width: 768px){
+ /*for mobiles*/
+
+}
+
+@media only screen and (min-width: 768px){
+    /*for desktop*/
+    .card{
+        width: 290px;
+    }
+    
+}
